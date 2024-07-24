@@ -1,0 +1,6 @@
+.jobDetail {
+  height: calc(100vh - 60px);
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
+}

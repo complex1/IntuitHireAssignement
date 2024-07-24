@@ -1,0 +1,157 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html, body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--background);
+  color: var(--text);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body.light {
+  --background: #f8f9fa;
+  --background-2: #ebf5ff;
+  --default: #343a40;
+  --text: #454c54;
+  --text-light: #495057;
+  --text-dark: #343a40;
+  --border: #dee2e6;
+  --border-dark: #ced4da;
+  --primary: #007bff;
+  --primary-light: #0056b3;
+  --primary-dark: #0041a3;
+  --secondary: #6c757d;
+  --secondary-light: #5a6268;
+  --secondary-dark: #545b62;
+  --success: #28a745;
+  --success-light: #218838;
+  --success-dark: #1e7e34;
+  --danger: #dc3545;
+  --danger-light: #c82333;
+  --danger-dark: #bd2130;
+  --warning: #ffc107;
+  --warning-light: #d39e00;
+  --warning-dark: #c69500;
+}
+
+body.dark {
+  --background: #212529;
+  --background-2: #343a40;
+  --default: #adb5bd;
+  --text: #f8f9fa;
+  --text-light: #dee2e6;
+  --text-dark: #adb5bd;
+  --border: #495057;
+  --border-dark: #343a40;
+  --primary: #007bff;
+  --primary-light: #0056b3;
+  --primary-dark: #0041a3;
+  --secondary: #6c757d;
+  --secondary-light: #5a6268;
+  --secondary-dark: #545b62;
+  --success: #28a745;
+  --success-light: #218838;
+  --success-dark: #1e7e34;
+  --danger: #dc3545;
+  --danger-light: #c82333;
+  --danger-dark: #bd2130;
+  --warning: #ffc107;
+  --warning-light: #d39e00;
+  --warning-dark: #c69500;
+}
+
+
+.flex {
+  display: flex;
+}
+.flex-column {
+  flex-direction: column;
+}
+.space-between {
+  justify-content: space-between;
+}
+.space-evenly {
+  justify-content: space-evenly;
+}
+.space-around {
+  justify-content: space-around;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.flex-shrink {
+  flex-shrink: 1;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+.elipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.v-center {
+  display: flex;
+  align-items: center;
+}
+
+.h-center {
+  display: flex;
+  justify-content: center;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

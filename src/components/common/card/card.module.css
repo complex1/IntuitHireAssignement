@@ -1,0 +1,11 @@
+.appCard {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  background-color: var(--background-2);
+  transition: box-shadow 0.3s ease;
+}
+
+.appCard:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

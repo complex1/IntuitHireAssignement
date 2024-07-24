@@ -1,0 +1,48 @@
+.employer {
+  height: calc(100vh - 60px);
+  overflow: hidden;
+  display: flex;
+}
+
+.employerLeft {
+  height: 100%;
+  max-width: 600px;
+  width: 30%;
+  padding: 0 16px;
+  min-width: 400px;
+  border-right: 1px solid var(--border);
+  overflow-y: auto;
+}
+
+.employerRight {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.postedJobTitle {
+  padding: 0.8rem 0;
+  margin: 0;
+  border-bottom: 1px solid var(--border);
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.postedJobTitle h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.noJobSelected {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  color: var(--warning)
+}

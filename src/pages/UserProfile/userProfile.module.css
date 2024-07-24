@@ -1,0 +1,71 @@
+.userDetail {
+  height: calc(100vh - 60px);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  overflow: auto;
+}
+
+.userDetail .loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 1.3rem;
+  color: var(--warning)
+}
+
+.userCard {
+  display: flex;
+  grid-gap: 12px;
+  margin-top: 20px;
+}
+
+.userCard img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.userCard h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.userCard p {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0;
+  color: var(--text-light);
+}
+
+.divider {
+  border-bottom: 1px solid var(--border);
+  margin: 1rem 0;
+}
+
+.userDetailSection {
+  display: flex;
+  align-items: flex-start;
+  grid-gap: 10px;
+}
+
+.userDetailSection h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.userDetailSection p {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+.repos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+  width: 100%;
+}

@@ -1,0 +1,46 @@
+.signup {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+.signupLeft {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-2);
+
+}
+
+.signupLeft img {
+  width: 80%;
+  border-radius: 2em;
+}
+.signupRight {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@media screen and (max-width: 768px) {
+  .signup {
+    flex-direction: column;
+  }
+
+  .signupLeft {
+    display: none;
+  }
+
+  .signupLeft img {
+    width: 50%;
+  }
+
+  .signupRight {
+    width: 100%;
+    height: 100%;
+  }
+  
+}

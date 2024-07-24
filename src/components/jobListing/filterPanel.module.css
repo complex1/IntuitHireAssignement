@@ -1,0 +1,21 @@
+.jobFilter {
+  max-height: 100%;
+  overflow-y: auto;
+  max-width: 400px;
+  min-width: 300px;
+}
+
+.jobFilter h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.jobFilter h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+

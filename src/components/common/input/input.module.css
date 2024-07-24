@@ -1,0 +1,106 @@
+.appInput {
+    font-size: 16px;
+    padding: 0 0.8em;
+    margin-bottom: 1em;
+    border: 1px solid currentColor;
+    border-radius: 0.25em;
+}
+
+.appInput:has(input:focus), .appInput:has(select:focus), .appInput:has(textarea:focus) {
+    border: 1px solid var(--text);
+}
+
+
+
+.appInput > legend {
+    font-size: 0.8em;
+    color: currentColor;
+    display: block;
+    max-width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.appInput > input, .appInput > select, .appInput > textarea {
+  font-size: 0.9em;
+  padding: 0.7em 0;
+  margin: 0;
+  color: var(--text);
+  border: 0px solid currentColor;
+  background-color: transparent;
+  border-radius: 0.25em;
+  width: 100%;
+  display: block;
+  margin-top: -0.5em;
+}
+
+.appInput > input:focus, .appInput > select:focus, .appInput > textarea:focus {
+    outline: none;
+    border: 0px solid currentColor;
+}
+
+.appInput > input::placeholder, .appInput > select::placeholder, .appInput > textarea::placeholder {
+    color: currentColor;
+    opacity: 0.5;
+}
+
+.appInput > select > option {
+    color: black;
+}
+
+.appInputMessage {
+    font-size: 0.8em;
+    color: currentColor;
+    display: block;
+    margin: -1em 0 1em 0.5em;
+    opacity: 0.9;
+}
+
+.appCheckbox {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.appCheckbox > input {
+    margin-right: 0.5em;
+}
+
+.appCheckbox > label {
+    color: currentColor;
+    font-size: 0.8em;
+}
+
+.disabled {
+    color: rgb(163, 163, 163) !important;
+}
+
+.disabled > input {
+    color: rgb(163, 163, 163) !important;
+}
+
+.success {
+    color: var(--success);
+}
+
+.danger {
+    color: var(--danger);
+}
+
+.warning {
+    color: var(--warning);
+}
+
+.primary {
+    color: var(--primary);
+}
+
+.secondary {
+    color: var(--secondary);
+}
+
+.default {
+    color: var(--default);
+}
+

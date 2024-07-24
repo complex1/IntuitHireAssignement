@@ -1,0 +1,67 @@
+.appButton {
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 0.25em;
+  padding: 0.5em 1em;
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.appButton:active {
+  transform: translate(0, 0.1em);
+  box-shadow: 0 0 0px rgba(0, 0, 0, 0.1);
+}
+
+.default {
+  background-color: #007bff;
+}
+
+.default:hover {
+  background-color: #0056b3;
+}
+
+.primary {
+  background-color: #28a745;
+}
+
+.primary:hover {
+  background-color: #218838;
+}
+
+.danger {
+  background-color: #dc3545;
+}
+
+.danger:hover {
+  background-color: #c82333;
+}
+
+.success {
+  background-color: #17a2b8;
+}
+
+.success:hover {
+  background-color: #138496;
+}
+
+.warning {
+  background-color: #ffc107;
+}
+
+.warning:hover {
+  background-color: #d39e00;
+}
+
+.secondary {
+  background-color: #6c757d;
+}
+
+.secondary:hover {
+  background-color: #545b62;
+}
+
