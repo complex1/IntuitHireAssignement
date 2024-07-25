@@ -11,7 +11,7 @@ const ThemeSwitchComponent = () => {
     if (localTheme) {
       setTheme(localTheme);
       const body = document.querySelector('body');
-      body?.classList.toggle('dark');
+      body?.setAttribute('class', localTheme);
     }
   }, []);
 
@@ -19,11 +19,11 @@ const ThemeSwitchComponent = () => {
     setTheme(theme === 'light' ? 'dark' : 'light');
     localStorage.setItem('theme', theme === 'light' ? 'dark' : 'light');
     const body = document.querySelector('body');
-    body?.classList.toggle('dark');
+    body?.setAttribute('class', theme === 'light' ? 'dark' : 'light');
   };
   return (
     <button className={styled.button} onClick={toggleTheme}>
-      {theme === 'light' ? <LightModeIcon /> : <DarkModeIcon />}
+      {theme === 'dark' ? <LightModeIcon /> : <DarkModeIcon />}
     </button>
   );
 }

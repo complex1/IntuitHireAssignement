@@ -22,8 +22,8 @@ html, body {
 }
 
 body.light {
-  --background: #f8f9fa;
-  --background-2: #ebf5ff;
+  --background: #eff7ff;
+  --background-2: #d3e6f9;
   --default: #343a40;
   --text: #454c54;
   --text-light: #495057;
