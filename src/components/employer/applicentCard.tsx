@@ -39,7 +39,7 @@ const AppliceantCardComponent = ({ application }: {
             <h4 className={styled.applicantName} >
               {userDetails?.fullName}
             </h4>
-            <p className={styled.applicantApplied}>Applied on: {application.date}</p>
+            <p className={styled.applicantApplied}><b>Applied on:</b> {application.date}</p>
           </div>
           <div className='v-center space-between mt-2' >
             <div className="v-center">

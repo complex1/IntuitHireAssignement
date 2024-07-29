@@ -3,6 +3,7 @@ import ButtonComponent from "../common/button/button";
 import InputComponent from "../common/input/input";
 import { addNewJob } from "../../api/jobs";
 import { IEmployer, IJob } from "../../types";
+import Notification from "../../plugins/notification/notification";
 
 interface NewJobFromProps {
   onJobPosted: () => void;
@@ -32,6 +33,10 @@ const PostNewJobComponent = (props: NewJobFromProps) => {
       error: ''
     },
     requirements: {
+      value: '',
+      error: ''
+    },
+    salary: {
       value: '',
       error: ''
     }
@@ -81,6 +86,11 @@ const PostNewJobComponent = (props: NewJobFromProps) => {
       isValid = false;
     }
 
+    if (formData.salary.value === '') {
+      newFormData.salary.error = 'Salary is required';
+      isValid = false;
+    }
+
     if (!isValid) {
       setFormData(newFormData);
     }
@@ -99,11 +109,13 @@ const PostNewJobComponent = (props: NewJobFromProps) => {
       requirements: formData.requirements.value,
       companyId: props.company.id,
       companyName: props.company.companyName,
+      salary: parseInt(formData.salary.value),
     } as IJob
 
     await addNewJob(job);
+    Notification.success('Job posted successfully');
     props.onJobPosted();
-    
+
   }
 
   return <div className="p-10">
@@ -139,16 +151,6 @@ const PostNewJobComponent = (props: NewJobFromProps) => {
     />
 
     <InputComponent
-      label="Budget"
-      placeholder="Enter budget"
-      value={formData.budget.value}
-      variant={formData.budget.error ? 'danger' : 'default'}
-      message={formData.budget.error}
-      onChange={(event) => setValue('budget', event.target.value)}
-      required
-    />
-
-    <InputComponent
       label="Duration"
       placeholder="Enter duration"
       value={formData.duration.value}
@@ -166,6 +168,17 @@ const PostNewJobComponent = (props: NewJobFromProps) => {
       variant={formData.requirements.error ? 'danger' : 'default'}
       message={formData.requirements.error}
       onChange={(event) => setValue('requirements', event.target.value)}
+      required
+    />
+
+    <InputComponent
+      label="Salary (in LPA)"
+      type="number"
+      placeholder="Enter salary"
+      value={formData.salary.value}
+      variant={formData.salary.error ? 'danger' : 'default'}
+      message={formData.salary.error}
+      onChange={(event) => setValue('salary', event.target.value)}
       required
     />
 

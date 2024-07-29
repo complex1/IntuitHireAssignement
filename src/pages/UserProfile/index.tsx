@@ -8,6 +8,7 @@ import { getFreelancerById, getUserGithubProfile, getUserGithubRepos } from '../
 import { IFreelancer } from '../../types';
 import GithubRepoCardComponent from '../../components/userProfile/githubCard';
 import BackIcon from '../../components/common/icons/backIcon';
+import LoaderComponent from '../../components/common/loader/loader';
 
 const UserProfilePage = () => {
   const { id } = useParams();
@@ -45,7 +46,7 @@ const UserProfilePage = () => {
     <>
       <HeaderComponent />
       <div className={styled.userDetail} >
-        {loading ? <div className="loading" >Loading...</div> : (
+        {loading ? <LoaderComponent /> : (
           <div>
             <div className='v-center' onClick={() => {
               window.history.back();

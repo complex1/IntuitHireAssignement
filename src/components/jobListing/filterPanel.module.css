@@ -19,3 +19,8 @@
   margin-bottom: 0.5rem;
 }
 
+.filterCheckboxContainer {
+  max-height: 200px;
+  overflow-y: auto;
+}
+

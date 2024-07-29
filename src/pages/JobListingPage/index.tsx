@@ -17,6 +17,8 @@ const JobListingPage = () => {
     companysOptions: [] as string[],
     experience: 0,
     experienceOptions: [] as number[],
+    salaryMin: 0,
+    salaryMax: 6,
   } as IFilter);
 
   useEffect(() => {
@@ -66,11 +68,16 @@ const JobListingPage = () => {
       if (filter.companys.length > 0 && !filter.companys.includes(job.companyName)) {
         return false;
       }
+      if (job.salary > filter.salaryMin && job.salary > filter.salaryMax) {
+        return false;
+      }
       return true;
     }
     ).sort((a, b) => {
       if (filter.sortBy === 'postedDate') {
         return new Date(b.postedDate).getTime() - new Date(a.postedDate).getTime();
+      } else if (filter.sortBy === 'applicants') {
+        return a.applicants - b.applicants;
       }
       return b.applicants - a.applicants;
     });

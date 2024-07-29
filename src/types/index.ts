@@ -9,6 +9,7 @@ export interface IJob {
   applicants: number;
   description: string;
   requirements: string;
+  salary: number;
 }
 
 export interface IEmployer {
@@ -37,4 +38,6 @@ export interface IFilter {
   companysOptions: string[];
   experience: number;
   experienceOptions: number[];
+  salaryMin: number;
+  salaryMax: number;
 }

@@ -22,6 +22,7 @@ html, body {
 }
 
 body.light {
+  --white: #fff;
   --background: #eff7ff;
   --background-2: #d3e6f9;
   --default: #343a40;
@@ -48,6 +49,7 @@ body.light {
 }
 
 body.dark {
+  --white: #fff;
   --background: #212529;
   --background-2: #343a40;
   --default: #adb5bd;

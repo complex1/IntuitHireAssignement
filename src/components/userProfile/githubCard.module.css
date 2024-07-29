@@ -2,6 +2,14 @@
   cursor: pointer;
   color: var(--text);
   text-decoration: none;
+  height: 100%;
+}
+
+.repoCardContainer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .repoCard h4 {
@@ -12,9 +20,13 @@
 }
 
 .repoCard p {
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 400;
   margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .language {

@@ -13,6 +13,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@faker-js/faker": "^8.4.1",
     "@reduxjs/toolkit": "^2.2.6",
     "concurrently": "^8.2.2",
     "react": "^18.3.1",

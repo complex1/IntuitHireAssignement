@@ -6,6 +6,7 @@ import { IFreelancer, IJob } from '../../types';
 import ButtonComponent from '../common/button/button';
 import { applyJob, getApplicentsByJobId } from '../../api/jobs';
 import { useEffect, useState } from 'react';
+import Notification from '../../plugins/notification/notification';
 
 
 
@@ -16,6 +17,7 @@ const PostedJobDetailsComponent = ({ data, showApplicents }: { data: IJob, showA
     applicant: string;
     date: string;
   }[]>([]);
+  
 
   useEffect(() => {
     loadApplicents();
@@ -38,6 +40,7 @@ const PostedJobDetailsComponent = ({ data, showApplicents }: { data: IJob, showA
       }
       const freelancer = JSON.parse(freelancerData || '{}') as IFreelancer;
       await applyJob(data.id, freelancer.id)
+      Notification.success('Applied successfully');
       window.location.href = '/';
     } catch (error) {
       console.error(error);
@@ -51,9 +54,12 @@ const PostedJobDetailsComponent = ({ data, showApplicents }: { data: IJob, showA
         {applications.length} Applicants
       </div>
     </div>
-    <div className="flex space-between my-2">
-      <p className={cardStyled.date} >Posted on: {data.postedDate}</p>
-      <p className={cardStyled.date}>Deadline: {data.deadline}</p>
+    <div className="flex space-between mt-2">
+      <p className={cardStyled.date} ><b>Posted on:</b> {data.postedDate}</p>
+      <p className={cardStyled.date}><b>Deadline:</b> {data.deadline}</p>
+    </div>
+    <div className='mb-2' >
+      <p className={cardStyled.date} ><b>Salary:</b> {data.salary}LPA</p>
     </div>
     <div>
       {data.tags.map((tag, index) => (

@@ -20,12 +20,15 @@ const JobCardComponent = (props: JobCardProps) => {
           </div>
         </div>
         <p>{job.description}</p>
+        <div>
+            <b>Salary:</b> <span>{job.salary}LPA</span>
+          </div>
         <div className="flex space-between">
           <div><b>Company:</b> {job.companyName}</div>
           <div className='v-center' >
             <b className='mx-2' >Tags:</b>
             <div>
-              {job.tags.map((tag) => (
+              {job.tags.slice(0, 3).map((tag) => (
                 <span key={tag} className={styled.chip} >{tag}</span>
               ))}
             </div>

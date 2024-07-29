@@ -11,6 +11,10 @@
   color: var(--text);
   margin: 0;
   margin-bottom: 6px;
+  width: calc(100% - 100px);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .applicants {
